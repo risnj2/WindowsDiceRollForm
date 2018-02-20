@@ -8,3 +8,13 @@ H:\a1-2017Programs\DiceRollWindowForm\DiceRollWindowForm\DiceRollWindowForm\obj\
 H:\a1-2017Programs\DiceRollWindowForm\DiceRollWindowForm\DiceRollWindowForm\obj\Debug\DiceRollWindowForm.csproj.CoreCompileInputs.cache
 H:\a1-2017Programs\DiceRollWindowForm\DiceRollWindowForm\DiceRollWindowForm\obj\Debug\DiceRollWindowForm.exe
 H:\a1-2017Programs\DiceRollWindowForm\DiceRollWindowForm\DiceRollWindowForm\obj\Debug\DiceRollWindowForm.pdb
+D:\Documents\VisualProjects\WindowsDiceRollForm\DiceRollWindowForm\bin\Debug\DiceRollWindowForm.exe.config
+D:\Documents\VisualProjects\WindowsDiceRollForm\DiceRollWindowForm\bin\Debug\DiceRollWindowForm.exe
+D:\Documents\VisualProjects\WindowsDiceRollForm\DiceRollWindowForm\bin\Debug\DiceRollWindowForm.pdb
+D:\Documents\VisualProjects\WindowsDiceRollForm\DiceRollWindowForm\obj\Debug\DiceRollWindowForm.csprojResolveAssemblyReference.cache
+D:\Documents\VisualProjects\WindowsDiceRollForm\DiceRollWindowForm\obj\Debug\DiceRollWindowForm.Form1.resources
+D:\Documents\VisualProjects\WindowsDiceRollForm\DiceRollWindowForm\obj\Debug\DiceRollWindowForm.Properties.Resources.resources
+D:\Documents\VisualProjects\WindowsDiceRollForm\DiceRollWindowForm\obj\Debug\DiceRollWindowForm.csproj.GenerateResource.Cache
+D:\Documents\VisualProjects\WindowsDiceRollForm\DiceRollWindowForm\obj\Debug\DiceRollWindowForm.csproj.CoreCompileInputs.cache
+D:\Documents\VisualProjects\WindowsDiceRollForm\DiceRollWindowForm\obj\Debug\DiceRollWindowForm.exe
+D:\Documents\VisualProjects\WindowsDiceRollForm\DiceRollWindowForm\obj\Debug\DiceRollWindowForm.pdb

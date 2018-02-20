@@ -44,3 +44,24 @@ This D20 roll result is :14
 This D20 roll result is :14
 This D20 roll result is :5
 This D20 roll result is :17
+This D12 roll result is :4+11+7=22
+This D12 roll result is :9+11+5=25
+This D12 roll result is :7+7+8=22
+This D12 roll result is :5+10+4=19
+This D12 roll result is :4+10+6=20
+This D12 roll result is :4+11+5=20
+This D12 roll result is :6+8+10=24
+This D12 roll result is :7+10+7=24
+This D12 roll result is :3+8+6=17
+This D12 roll result is :6
+This D12 roll result is :4
+This D12 roll result is :9
+This D12 roll result is :3
+This D12 roll result is :2
+This D12 roll result is :11
+This None Selected roll result is :
+This None Selected roll result is :
+This None Selected roll result is :
+This D12 roll result is :10
+This D12 roll result is :9+4+11+11=35
+This D100 roll result is :97+31+66+25+60+90+58+55+70+55=607

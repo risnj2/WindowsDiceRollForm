@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,7 +58,6 @@ namespace DiceRollWindowForm
                 buttonClicked = "D100";
                 dieNum = 100;
             }
-
             int outcome = 0;
             int totalOutcome = 0;
             String Name = maskedTextBoxName.Text.ToString();
@@ -107,7 +107,6 @@ namespace DiceRollWindowForm
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void buttonCharacterFileChoice_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -118,16 +117,143 @@ namespace DiceRollWindowForm
                 textCharFileLocation.Text = ofd.FileName;
             }
         }
-
         private void buttonPrintStats_Click(object sender, EventArgs e)
         {
-            System.IO.StreamReader sr = new System.IO.StreamReader(textCharFileLocation.Text);
-            List<String> charStats = new List<String>();
-            for (int i = 0; )
+            try
             {
-
+                System.IO.StreamReader sr = new System.IO.StreamReader(textCharFileLocation.Text);
+                List<String> charStats = new List<String>();
+                int i = 1;
+                while (true)
+                {
+                    String initialString = sr.ReadLine();
+                    Char[] statValueArray = initialString.ToArray();
+                    String statValue = "";
+                    bool pastEqual = false;
+                    for (int x = 0; x < statValueArray.Length; x++)
+                    {
+                        if (pastEqual)
+                        {
+                            statValue = statValue + statValueArray[x];
+                        }
+                        else if (statValueArray[x].Equals('='))
+                        {
+                            pastEqual = true;
+                        }
+                        /*if (Char.IsDigit(statValueArray[x]))
+                        {
+                            statValue = statValue + statValueArray[x];
+                        }*/
+                    }
+                    //String statValue = new String(initialString.Where(Char.IsDigit).ToArray());
+                    if (i == 1)
+                    {
+                        textBoxStat1.Text = statValue;
+                        i++;
+                    }
+                    else if (i == 2)
+                    {
+                        textBoxStat2.Text = statValue;
+                        textBoxModifier1.Text = (DiceRolls.GetModifierText(statValue).ToString());
+                        i++;
+                    }
+                    else if (i == 3)
+                    {
+                        textBoxStat3.Text = statValue;
+                        textBoxModifier2.Text = (DiceRolls.GetModifierText(statValue).ToString());
+                        i++;
+                    }
+                    else if (i == 4)
+                    {
+                        textBoxStat4.Text = statValue;
+                        textBoxModifier3.Text = (DiceRolls.GetModifierText(statValue).ToString());
+                        i++;
+                    }
+                    else if (i == 5)
+                    {
+                        textBoxStat5.Text = statValue;
+                        textBoxModifier4.Text = (DiceRolls.GetModifierText(statValue).ToString());
+                        i++;
+                    }
+                    else if (i == 6)
+                    {
+                        textBoxStat6.Text = statValue;
+                        textBoxModifier5.Text = (DiceRolls.GetModifierText(statValue).ToString());
+                        i++;
+                    }
+                    else if (i == 7)
+                    {
+                        textBoxStat7.Text = statValue;
+                        textBoxModifier6.Text = (DiceRolls.GetModifierText(statValue).ToString());
+                        i++;
+                        break;
+                    }
+                }
             }
-            charStats[0] = sr.ReadLine();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
+        }
+        private void buttonPrintBlankSheet_Click(object sender, EventArgs e)
+        {
+            string newFileName = "NewBlankCharaterSheet.txt";
+            if (File.Exists(newFileName))
+            {
+                int i = 1;
+                while (true)
+                {
+                    newFileName = "NewBlankCharaterSheet" + i + ".txt";
+                    if (File.Exists(newFileName))
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(newFileName, true);
+            sw.WriteLine("Name=");
+            sw.WriteLine("Strength=");
+            sw.WriteLine("Dexterity=");
+            sw.WriteLine("Constitution=");
+            sw.WriteLine("Intelligence=");
+            sw.WriteLine("Wisdom=");
+            sw.WriteLine("Charisma=");
+            sw.Close();
+        }
+        private void buttonGetCurrentModifiers_Click(object sender, EventArgs e)
+        {
+            for (int i = 1; i<=6;i++)
+            {
+                if (i == 1)
+                {
+                    textBoxModifier1.Text = (DiceRolls.GetModifierText(textBoxStat2.Text).ToString());
+                }
+                else if (i == 2)
+                {
+                    textBoxModifier2.Text = (DiceRolls.GetModifierText(textBoxStat3.Text).ToString());
+                }
+                else if (i == 3)
+                {
+                    textBoxModifier3.Text = (DiceRolls.GetModifierText(textBoxStat4.Text).ToString());
+                }
+                else if (i == 4)
+                {
+                    textBoxModifier4.Text = (DiceRolls.GetModifierText(textBoxStat5.Text).ToString());
+                }
+                else if (i == 5)
+                {
+                    textBoxModifier5.Text = (DiceRolls.GetModifierText(textBoxStat6.Text).ToString());
+                }
+                else if (i == 6)
+                {
+                    textBoxModifier6.Text = (DiceRolls.GetModifierText(textBoxStat7.Text).ToString());
+                }
+            }
         }
     }
 }

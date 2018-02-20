@@ -1,0 +1,8 @@
+Name=Wake
+str=15
+dex=22
+con=33
+int=24
+wis=35
+cha=46
+End

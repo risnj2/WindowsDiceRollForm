@@ -1,0 +1,8 @@
+Name=Borky
+str=10
+dex=2
+con=3
+int=2
+wis=3
+cha=4
+End
